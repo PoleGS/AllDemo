@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>两列布局</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            box-sizing: border-box;
+            height: 100%;
+        }
+        .left{
+            float: left;
+            width: 200px;
+            background-color: green;
+            height: 100%;
+        }
+        .right{
+            margin-left: 200px;
+            background-color: red;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- 一侧固定, 另一侧自适应 -->
+    <div class="left">左边左边左边左边</div>
+    <div class="right">右边右边右边右边右边右边右边右边</div>
+</body>
+</html>

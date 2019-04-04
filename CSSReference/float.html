@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动学习</title>
+    <style>
+        section {width:auto; border:1px solid red; float: left}
+        img {float:left; margin:0 4px 4px 0;}
+        /*为简明起见，省略了字体声明*/
+        p {margin:0 0 5px 0;}
+        .clearfix:before,
+        .clearfix:after {
+            display: table;
+            content: '';
+        }
+        .clearfix:after {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <img src="https://upload-images.jianshu.io/upload_images/1158202-27ac63a8ae142d04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/457">
+        <p class="clearfix">This text sits next to the image and because the extends below the bottom of the image, the next image positions itself correctly under the previous image</p>
+        <img src="https://upload-images.jianshu.io/upload_images/1158202-27ac63a8ae142d04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/457">
+        <p class="clearfix">This text is short, so the next image can float up beside this one</p>
+        <img src="https://upload-images.jianshu.io/upload_images/1158202-27ac63a8ae142d04.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/457">
+        <p class="clearfix">Because the previous image’s text does not extend below it, this image and text move up next previous image, This problem can be solved by the use of clear property</p>
+    </section>
+</body>
+</html>

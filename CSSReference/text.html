@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本相关属性</title>
+    <style>
+        p.letterSpacing{
+            letter-spacing: 0em;
+        }
+        p.wordSpacing{
+            word-spacing: .2em;
+        }
+        p.custom sub {font-size:60%; vertical-align:-.4em;}
+        p.custom sup {font-size:65%; vertical-align:.65em;}
+        p.customsmall {font-size:.8em; vertical-align:1em;}
+    </style>
+</head>
+<body>
+    <p class="letterSpacing">This is a test paragraph about letter-spacing</p>
+    <p class="wordSpacing">This is a test paragraph about word-spacing</p>
+    <h4>Default <code>sub</code> and <code>sup</code> styles</h4>
+    <p>Enjoy mountain spring H<sub>2</sub>O. It’s 10<sup>5</sup> times better than tap<sup>&dagger;</sup> water!</p>
+    <p class="customsmall"><sup>&dagger;</sup><em>This means water provided through a municipal distribution system</em></p>
+    <h4>Custom <code>sub</code> and <code>sup</code> styles</h4>
+    <p class="custom">Enjoy mountain spring H<sub>2</sub>O. It’s 10<sup>5</sup> times better than tap<sup>&dagger;</sup> water!</p>
+    <p class="customsmall"><sup>&dagger;</sup><em>This means water provided through a municipal distribution system</em></p>
+</body>
+</html>
