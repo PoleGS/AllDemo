@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>三栏中栏流动布局</title>
+    <style type="text/css">
+        /* 在中栏改变大小时 使用负外边距定位右栏 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font: 1em helvetica, arial, sans-serif;
+        }
+        a{ text-decoration: none; color: #fff;}
+
+        div#main_wrapper {
+            min-width: 600px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        header {
+            padding: 5px 10px;
+            background: #3f7ccf;
+        }
+        div#threecolwrap {
+            float: left;
+            width: 100%;
+        }
+        div#twocolwrap{
+            float: left;
+            width: 100%;
+            margin-right: -210px;
+        }
+        nav {
+            float: left;
+            width: 150px;
+            background: #f00;
+            padding: 20px 0;
+        }
+        nav > * { margin: 0 20px;}
+        article {
+            width: auto;
+            margin-left: 150px;
+            margin-right: 210px;
+            background: #eee;
+            padding: 20px 0;
+        }
+        article > * { margin:0 20px;}
+        aside {
+            float: left;
+            width: 210px;
+            background: #ffed53;
+            padding: 20px 0;
+        }
+        aside > * { margin: 0 20px;}
+        footer {
+            clear: both;
+            width: 100%;
+            text-align: center;
+            background: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="main_wrapper">
+        <header>A Three-Column Fluid Center Layout</header>
+        <div id="threecolwrap">
+            <div id="twocolwrap">
+                <nav>
+                    <ul>
+                        <li><a href="#">无序列表</a></li>
+                        <li><a href="#">无序列表</a></li>
+                        <li><a href="#">无序列表</a></li>
+                        <li><a href="#">无序列表</a></li>
+                        <li><a href="#">无序列表</a></li>
+                    </ul>
+                </nav>
+                <article>
+                    <div class="inner">
+                        这里是一些文本元素这里是一些文本元素这里是一些文本元素这里是一些文本元素这里是一些文本元素这里是一些文本元素这里是一些文本元素这里是一些文本元素这里是一些文本元素这里是一些文本元素这里是一些文本元素这里是一些文本元素这里是一些文本元素这里是一些文本元素这里是一些文本元素这里是一些文本元素这里是一些文本元素这里是一些文本元素这里是一些文本元素这里是一些文本元素这里是一些文本元素这里是一些文本元素这里是一些文本元素这里是一些文本元素这里是一些文本元素这里是一些文本元素这里是一些文本元素这里是一些文本元素这里是些文本元素这里是一些文本元素这里是一些文本元素这里是一些文本元素这里是一些文本元素这里是一些文本元素.
+                    </div>
+                </article>
+            </div>
+            <aside>
+                <div>
+                    <h3>Sidebar Area</h3>
+                    <div>
+                        这里是第三栏这里是第三栏这里是第三栏这里是第三栏这里是第三栏这里是第三栏这里是第三栏这里是第三栏
+                    </div>
+                </div>
+            </aside>
+        </div>
+        <footer>页脚</footer>
+</div>
+</body>
+</html>

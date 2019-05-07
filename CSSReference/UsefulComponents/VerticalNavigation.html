@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>纵向菜单</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* 设定菜单大小和位置 */
+        nav {
+            margin: 50px;
+            width: 150px;
+        }
+        .list1 ul {
+            border: 1px solid #f00;
+            border-radius: 3px;
+            padding: 5px 10px 3px;
+        }
+        .list1 ul li {
+            list-style-type: none;
+        }
+        .list1 li+li a {
+            border-top: 1px solid #f00;
+        }
+        .list1 a {
+            display: block;
+            padding: 3px 10px;
+            text-decoration: none;
+            font: 20px Exo, helvetica, arial, sans-serif;
+            font-weight: normal;
+            color: black;
+        }
+        .list1 a:hover {
+            color: springgreen;
+        }
+
+        .list2 {
+            width: auto;
+        }
+        .list2 ul {
+            /* ul包围浮动的li */
+            overflow: hidden;
+        }
+        .list2 li {
+            float: left;
+            list-style-type: none;
+        }
+        .list2 a {
+            display: block;
+            padding: 0 16px;
+            text-decoration: none;
+            color: #999;
+        }
+        .list2 li+li a {
+            border-left: 1px solid #aaa;
+        }
+        .list2 a:hover {
+            color: springgreen;
+        }
+    </style>
+</head>
+<body>
+    <nav class="list1">
+        <ul>
+            <!-- #是URL占位符 -->
+            <li><a href="#">链接1</a> </li>
+            <li><a href="#">链接2</a> </li>
+            <li><a href="#">链接3</a> </li>
+            <li><a href="#">链接4</a> </li>
+            <li><a href="#">链接5</a> </li>
+        </ul>
+    </nav>
+
+    <!-- 横向导航条 -->
+    <nav class="list2">
+        <ul>
+            <!-- #是URL占位符 -->
+            <li><a href="#">链接1</a> </li>
+            <li><a href="#">链接2</a> </li>
+            <li><a href="#">链接3</a> </li>
+            <li><a href="#">链接4</a> </li>
+            <li><a href="#">链接5</a> </li>
+        </ul>
+    </nav>
+</body>
+</html>
