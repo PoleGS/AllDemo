@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>搜索框组件</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            font-family: helvetica, arial, sans-serif;
+            display: block;
+            overflow: hidden;
+            width: 500px;
+            margin: 30px;
+            border-radius: 6px;
+            background-color: #ddd;
+        }
+        form.search {
+            float: right;
+            width: 200px;
+            margin: 5px;
+            padding: 5px;
+        }
+        form.search input {
+            float: right;
+            width: 150px;
+            padding: 2px 0 3px 5px;
+            outline: none;
+            font-size: .8em;
+            border-color: #eee #ccc #ccc #eee;
+            border-radius: 10px;
+            -webkit-transition: 500ms width;
+        }
+        form.search input:focus {
+            width: 200px;
+        }
+        form.search label {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <form class="search" action="#" method="post">
+            <label for="search">搜索</label>
+            <input type="search" id="search" name="search" placeholder="输入你想要搜索的内容">
+        </form>
+    </header>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹出层Demo</title>
+    <style type="text/css">
+        figure {
+            width: 129px;
+            height: 130px;
+            margin: 20px 20px;  /* 图片盒子间距 */
+            border: 1px solid #666;
+            position: relative; /* 为弹出层提供定位上下文 */
+            float: left;
+        }
+        img {
+            display: block;
+        }
+        figcaption {
+            display: none;
+            position: absolute;
+            left: 74%;
+            top: 14px;
+            width: 130px;
+            padding: 10px;
+            background: #f2eaea;
+            border: 3px solid red;
+            border-radius: 6px;
+        }
+        figure:hover figcaption {
+            display: block;
+            z-index: 2;
+        }
+        figcaption h3 {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 6px;
+        }
+        figcaption a {
+            display: block;
+            text-decoration: none;
+            font-size: 12px;
+            color: #000;
+        }
+        figcaption::after {
+            content: '';
+            position: absolute;
+            border: 12px solid;
+            border-color: transparent #f7be84 transparent transparent;
+            right: 100%;
+            top: 17px;
+            height: 0;
+            width: 0;
+        }
+    </style>
+</head>
+<body>
+    <figure>
+        <img src="../../images/error.png" alt="Image Demo">
+        <figcaption>
+            <h3>Figure 1</h3>
+            <a href="#">More Info</a>
+        </figcaption>
+    </figure>
+    <figure class="click_me">
+        <img src="../../images/error.png" alt="Image Demo">
+        <figcaption>
+            <h3>Figure 2</h3>
+            <a href="#">More Info</a>
+        </figcaption>
+    </figure>
+    <figure cass="click_me">
+        <img src="../../images/error.png" alt="Image Demo">
+        <figcaption>
+            <h3>Figure 3</h3>
+            <a href="#">More Info</a>
+        </figcaption>
+    </figure>
+</body>
+</html>

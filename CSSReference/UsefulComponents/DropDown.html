@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉菜单Demo</title>
+    <style type="text/css">
+        /* 视觉样式 */
+        .multi_drop_menu {
+            font: 1em helvetica, arial, sans-serif;
+        }
+        .multi_drop_menu a {
+            display: block;
+            color: #555;
+            background-color: #eee;
+            padding: .2em 1em;
+            border-width: 3px;
+            border-color: transparent;
+        }
+        .multi_drop_menu a:active {
+            background-color: #fff;
+            color: #ccc;
+        }
+        .multi_drop_menu li:hover > a{
+            color: #fff;
+            background-color: #aaa;
+        }
+        /* 垂直菜单栏视觉样式 - 在nav的类名中添加vertical */
+        .multi_drop_menu.vertical {width:8em;} 	/* top level menu width (vertical only) */
+        .multi_drop_menu.vertical li a {
+            border-right-style:none;
+            border-top-style:solid;
+        }
+        .multi_drop_menu.vertical li li a {
+            border-left-style:solid;
+        }
+        /* 功能样式 */
+        .multi_drop_menu * {
+            margin: 0;
+            padding: 0;
+        }
+        .multi_drop_menu ul {
+            float: left;
+        }
+        .multi_drop_menu li {
+            float: left;
+            list-style-type: none;
+            position: relative;  /* 为子菜单提供定位上下文 */
+        }
+        .multi_drop_menu li a {
+            display: block;
+            border-right-style: solid;
+            background-clip: padding-box; /* 背景只出现在内边距区域后面 */
+            text-decoration: none;
+        }
+        .multi_drop_menu li:last-child a {
+            border-right-style: none;
+        }
+        /* 二级菜单宽度 */
+        .multi_drop_menu li ul {
+            width: 9em;
+        }
+        .multi_drop_menu li li a {
+            border-right-style: none; /* 去掉继承的右边框 */
+            border-top-style: solid;
+        }
+        .multi_drop_menu li ul {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 100%;
+        }
+        .multi_drop_menu li:hover > ul {
+            display: block;
+        }
+        .multi_drop_menu li li {
+            float: none;
+        }
+        .multi_drop_menu li li ul {
+            position: absolute;
+            left: 100%;
+            top: 0;
+        }
+        /* 垂直菜单栏功能样式 */
+        .multi_drop_menu.vertical ul,
+        .multi_drop_menu.vertical li {
+            float:none;
+        }
+        .multi_drop_menu.vertical li ul {
+            left:100%;
+            top:0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="multi_drop_menu"> <!-- 如果需要垂直菜单栏 在类名上添加vertical即可 -->
+        <!-- 一级菜单开始 -->
+        <ul>
+            <li><a href="#">一级菜单1</a> </li>
+            <li><a href="#">一级菜单2</a> </li>
+            <li><a href="#">一级菜单3</a> </li>
+            <li><a href="#">一级菜单4</a>
+                <!-- 二级菜单开始 -->
+                <ul>
+                    <li><a href="#">二级菜单1</a> </li>
+                    <li><a href="#">二级菜单2</a> </li>
+                    <li><a href="#">二级菜单3</a>
+                        <!-- 三级菜单开始 -->
+                        <ul>
+                            <li><a href="#">三级菜单1</a> </li>
+                            <li><a href="#">三级菜单2</a> </li>
+                            <li><a href="#">三级菜单3</a> </li>
+                            <li><a href="#">三级菜单4</a> </li>
+                        </ul>
+                        <!-- 结束三级菜单 -->
+                    </li>
+                </ul>
+                <!-- 结束二级菜单 -->
+            </li>
+        </ul>
+        <!-- 结束一级菜单 -->
+    </nav>
+</body>
+</html>
