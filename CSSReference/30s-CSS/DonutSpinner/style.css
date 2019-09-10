@@ -1,0 +1,18 @@
+@keyframes dount-spinner {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.dount {
+    display: inline-block;
+    border: 4px solid rgba(0,0,0,0.1);
+    border-radius: 50% 50%;
+    width: 30px;
+    height: 30px;
+    border-left-color: #7983ff;
+    animation: dount-spinner 1.2s linear infinite;
+}
