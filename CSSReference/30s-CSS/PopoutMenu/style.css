@@ -1,0 +1,21 @@
+.reference {
+    position: relative;
+    background: tomato;
+    width: 100px;
+    height: 100px;
+}
+
+.popout {
+    position: absolute;
+    visibility: hidden;
+    left: 100%;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+}
+
+.reference:hover > .popout,
+.reference:focus > .popout,
+.reference:focus-within > .popout {
+    visibility: visible;
+}
