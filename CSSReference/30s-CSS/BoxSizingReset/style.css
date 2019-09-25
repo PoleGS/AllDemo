@@ -1,0 +1,25 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* content-box: 宽高直接作用在内容区
+    border-box: 宽高包含border padding 内容区
+ */
+.box {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    background: tomato;
+    color: white;
+    border: 10px solid red;
+}
+.content-box {
+    box-sizing: content-box;
+}
